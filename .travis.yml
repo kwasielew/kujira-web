@@ -12,9 +12,9 @@ before_install:
 install:
   - npm install -g jshint
   - npm install -g eslint
-  - npm install -g phantomjs
-  - cd kujira && npm install
-  - cd kujira && bower install
+  - npm install -g phantomjs-prebuilt
+  - cd $TRAVIS_BUILD_DIR/kujira && npm install
+  - cd $TRAVIS_BUILD_DIR/kujira && bower install
   
 script:
   - cd kujira
