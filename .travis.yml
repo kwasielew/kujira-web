@@ -13,8 +13,8 @@ install:
   - npm install -g jshint
   - npm install -g eslint
   - npm install -g phantomjs
-  - npm install --prefix kujira
-  - bower install --config.cwd=kujira
+  - cd kujira && npm install
+  - cd kujira && bower install
   
 script:
   - cd kujira
