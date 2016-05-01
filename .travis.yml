@@ -11,7 +11,6 @@ before_install:
 
 install:
   - cd kujira
-  - npm install -g jshint
   - npm install -g phantomjs-prebuilt
   - npm install
   - bower install
