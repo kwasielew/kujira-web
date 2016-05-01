@@ -17,6 +17,5 @@ install:
   - cd $TRAVIS_BUILD_DIR/kujira && bower install
   
 script:
-  - cd kujira
   - jshint app tests --verbose
   - ember test
