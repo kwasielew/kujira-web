@@ -7,13 +7,16 @@ sudo: false
 before_install:
   - "npm config set spin false"
   - "npm install -g npm@^2"
+  - npm install -g bower
 
 install:
   - npm install -g jshint
   - npm install -g eslint
-  - npm install -g bower
+  - npm install -g phantomjs
   - npm install --prefix kujira
   - bower install --config.cwd=kujira
   
 script:
-  - jshint kujira/app kujira/tests/ --verbose
+  - cd kujira
+  - jshint app tests --verbose
+  - ember test
