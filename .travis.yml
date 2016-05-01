@@ -5,16 +5,17 @@ node_js:
 sudo: false
 
 before_install:
-  - "npm config set spin false"
-  - "npm install -g npm@^2"
+  - npm config set spin false
+  - npm install -g npm@^2
   - npm install -g bower
 
 install:
+  - cd kujira
   - npm install -g jshint
   - npm install -g eslint
   - npm install -g phantomjs-prebuilt
-  - cd $TRAVIS_BUILD_DIR/kujira && npm install
-  - cd $TRAVIS_BUILD_DIR/kujira && bower install
+  - npm install
+  - bower install
   
 script:
   - jshint app tests --verbose
